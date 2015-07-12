@@ -73,7 +73,7 @@ At least one property must be specified, that is, at least `global`, `consumers`
       "path" : "simple-rate-limit",
       "config" : {
         "providers" : {
-          "/some_provider" : {
+          "providerId" : {
             "global" : {
               "tokens" : 100,
               "interval" : "second"
@@ -99,7 +99,7 @@ At least one property must be specified, that is, at least `global`, `consumers`
       "path" : "simple-rate-limit",
       "config" : {
         "providers" : {
-          "/some_provider" : {
+          "providerId" : {
             "global" : {
               "tokens" : 100,
               "interval" : "second"
