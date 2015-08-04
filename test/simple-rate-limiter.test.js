@@ -91,7 +91,7 @@ describe("simple-rate-limiter", function() {
           }
         },
         {
-          id: "XXX-simple-rate-limiter",
+          id: "simple-rate-limiter",
           path: path.join(__dirname, "../lib/index.js"),
           config: {
             consumers: {
@@ -152,16 +152,12 @@ describe("simple-rate-limiter", function() {
 
           prefilters: [
             {
-              id: "AAA-simple-rate-limiter",
+              id: "simple-rate-limiter",
               path: path.join(__dirname, "../lib/index.js"),
               config: {
-                providers: {
-                  providerA: {
-                    global: {
-                      tokens: 1,
-                      interval: "second"
-                    }
-                  }
+                global: {
+                  tokens: 1,
+                  interval: "second"
                 }
               }
             }
@@ -224,14 +220,10 @@ describe("simple-rate-limiter", function() {
               id: "simple-rate-limit",
               path: path.join(__dirname, "../lib/index.js"),
               config: {
-                providers: {
-                  providerB: {
-                    consumers: {
-                      userB: {
-                        tokens: 1,
-                        interval: "second"
-                      }
-                    }
+                consumers: {
+                  userB: {
+                    tokens: 1,
+                    interval: "second"
                   }
                 }
               }
