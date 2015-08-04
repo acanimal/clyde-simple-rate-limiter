@@ -3,7 +3,7 @@
 var path = require("path"),
     request = require("supertest"),
     http = require("http"),
-    clyde = require("clyde");
+    clyde = require("clydeio");
 
 
 describe("simple-rate-limiter", function() {
@@ -82,7 +82,7 @@ describe("simple-rate-limiter", function() {
       prefilters: [
         {
           id: "http-auth",
-          path: "clyde-simple-http-auth",
+          path: "clydeio-simple-http-auth",
           config: {
             method: "basic",
             consumers: {
@@ -203,7 +203,7 @@ describe("simple-rate-limiter", function() {
       prefilters: [
         {
           id: "http-auth",
-          path: "clyde-simple-http-auth",
+          path: "clydeio-simple-http-auth",
           config: {
             method: "basic",
             consumers: {

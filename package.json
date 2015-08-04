@@ -1,6 +1,6 @@
 {
   "author": "Antonio Santiago <asantiagop@gmail.com> (http://acuriousanimal.com/blog)",
-  "name": "clyde-simple-rate-limiter",
+  "name": "clydeio-simple-rate-limiter",
   "homepage": "https://github.com/acanimal/clyde-simple-rate-limiter",
   "description": "Rate limiter filter for Clyde API gateway.",
   "keywords": [
@@ -9,7 +9,7 @@
     "rate",
     "limiter"
   ],
-  "version": "0.1.0",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/acanimal/clyde-simple-rate-limiter.git"
@@ -30,8 +30,8 @@
     "limiter": "^1.0.5"
   },
   "devDependencies": {
-    "clyde": "git+https://github.com/acanimal/clyde.git",
-    "clyde-simple-http-auth": "git+https://github.com/acanimal/clyde-simple-http-auth.git",
+    "clydeio": "^0.2.0",
+    "clydeio-simple-http-auth": "^0.1.0",
     "eslint": "^0.24.0",
     "mocha": "^2.2.5",
     "supertest": "^1.0.1"
