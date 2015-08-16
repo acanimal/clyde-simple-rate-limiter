@@ -4,14 +4,23 @@ A basic rate limiter implementation filter for [Clyde](https://github.com/acanim
 
 > Implementation is based on [limiter](https://github.com/jhurliman/node-rate-limiter) module.
 
-<!-- MarkdownTOC -->
+<!-- TOC depth:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- Configuration
-  - Examples
-  - Notes
-- License
+- [Simple Rate Limiter Filter](#simple-rate-limiter-filter)
+	- [Installation](#installation)
+	- [Configuration](#configuration)
+	- [Examples](#examples)
+		- [Limit global access to 100 req/sec](#limit-global-access-to-100-reqsec)
+		- [Limit access to a provider to 100 req/sec](#limit-access-to-a-provider-to-100-reqsec)
+		- [Limit access to a provider to 100 req/sec and to the `userA` consumer rate limited to 20 req/sec](#limit-access-to-a-provider-to-100-reqsec-and-to-the-usera-consumer-rate-limited-to-20-reqsec)
+	- [Notes](#notes)
+- [License](#license)
 
-<!-- /MarkdownTOC -->
+<!-- /TOC -->
+
+## Installation
+
+`npm install clydeio-simple-rate-limiter --save`
 
 ## Configuration
 
@@ -19,7 +28,7 @@ Rate limiter filter is extremely flexible and allows limit access globally or pe
 
 * `global`: Specifies the limits to be applied globally. It must be an object with the properties:
   - `tokens`: Number of allowed access
-  - `interval`: Interval within the previous accesses are allowed. Allowed values are: `sec/second`, `min/minute`, `hr/hour` and `day`. 
+  - `interval`: Interval within the previous accesses are allowed. Allowed values are: `sec/second`, `min/minute`, `hr/hour` and `day`.
 
 * `consumers`: Specifies the global limits per consumers. For each consumer and object with `tokens` and `interval` properties must be specified.
 
@@ -62,7 +71,7 @@ At least one property must be specified, that is, at least `global` or `consumer
       "prefilters" : [
         {
           "id" : "rate-limiter",
-          "path" : "clydeio-simple-rate-limit",
+          "path" : "clydeio-simple-rate-limiter",
           "config" : {
             "global" : {
               "tokens" : 100,
@@ -88,7 +97,7 @@ At least one property must be specified, that is, at least `global` or `consumer
       "prefilters" : [
         {
           "id" : "rate-limiter",
-          "path" : "clydeio-simple-rate-limit",
+          "path" : "clydeio-simple-rate-limiter",
           "config" : {
             "global" : {
               "tokens" : 100,
